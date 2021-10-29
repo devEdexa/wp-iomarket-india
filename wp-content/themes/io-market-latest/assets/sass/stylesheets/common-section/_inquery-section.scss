@@ -1,0 +1,67 @@
+.inquery-section {
+    .profile-box {
+        .profile-image {
+            width: 280px;
+            height: 280px;
+            border: 4px solid $color-primary;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .contact-box {
+        -webkit-box-shadow: 1.5px 2.598px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 1.5px 2.598px 15px rgba(0, 0, 0, 0.1);
+        .iom-arrow-button {
+            min-width: auto;
+        }
+        .text {
+            max-width: 590px;
+        }
+    }
+    #meeting {
+        top: -115.98px;
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 1399px) {
+    .inquery-section {
+        .profile-box {
+            .profile-image {
+                width: 220px;
+                height: 220px;
+            }
+        }
+        #meeting {
+            top: -78.77px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .inquery-section {
+        .profile-box {
+            .profile-image {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 991px) {
+    .inquery-section {
+        #meeting {
+            top: -68.77px;
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    .inquery-section {
+        #meeting {
+            top: -55.22px;
+        }
+    }
+}

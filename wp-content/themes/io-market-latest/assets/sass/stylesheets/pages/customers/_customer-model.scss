@@ -1,0 +1,439 @@
+.customer-modal {
+    .modal-dialog {
+        max-width: 60%;
+        background: $color-white;
+        border: 1px $color-gray-border solid;
+        -webkit-box-shadow: 0 0 15px 5px rgba(209, 209, 209, 0.3);
+        -ms-box-shadow: 0 0 15px 5px rgba(209, 209, 209, 0.3);
+        -o-box-shadow: 0 0 15px 5px rgba(209, 209, 209, 0.3);
+        -moz-box-shadow: 0 0 15px 5px rgba(209, 209, 209, 0.3);
+        box-shadow: 0 0 15px 5px rgba(209, 209, 209, 0.3);
+        border-radius: 0;
+        min-height: auto;
+        .modal-content {
+            border: 0;
+            border-radius: 0;
+            .close {
+                width: 30px;
+                border-radius: 50%;
+                height: 30px;
+                right: -9px;
+                z-index: 9;
+                top: -10px;
+                opacity: 1;
+                padding: 8px;
+                border: none;
+                img {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+    }
+}
+
+.customer-detail {
+    padding: 30px;
+    h2 {
+        padding-bottom: 0.9375rem;
+        margin: 0 0 0.9375rem;
+        &:before {
+            position: absolute;
+            top: 100%;
+            width: 35px;
+            height: 2px;
+            left: 0;
+            content: "";
+            background: $color-primary;
+        }
+    }
+    img {
+        &.bg-img {
+            top: -30px;
+            right: -30px;
+            border: 0;
+            margin: 0;
+            height: auto;
+            width: 279px;
+            height: 375px;
+            border-radius: inherit;
+            z-index: 1;
+        }
+    }
+    .customer-popup-img {
+        width: 322px;
+        height: 313px;
+        border-radius: 100%;
+        border: 5px $color-primary solid;
+        display: table;
+        background: $color-white;
+        z-index: 2;
+        p {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    .hoval-img {
+        img {
+            width: 89%;
+            margin: auto;
+            display: block;
+        }
+    }
+    blockquote {
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+    }
+    .head-img {
+        margin: 15px 0;
+        img {
+            float: none;
+            margin-bottom: 25px;
+            width: 146px;
+            height: 142px;
+            margin: 0;
+            display: inline-block;
+            margin-right: 25px;
+            border-radius: 100%;
+            object-fit: cover;
+        }
+        .quote {
+            width: -webkit-calc(100% - 176px);
+            width: calc(100% - 176px);
+        }
+    }
+    .share-buttons {
+        .share-icons {
+            a {
+                height: 26px;
+                width: 26px;
+                &:hover {
+                    -webkit-transform: scale(1.15);
+                    -o-transform: scale(1.15);
+                    -ms-transform: scale(1.15);
+                    -moz-transform: scale(1.15);
+                    transform: scale(1.15);
+                }
+            }
+        }
+    }
+}
+
+.customer-modal {
+    .modal-dialog {
+        max-width: 60%;
+        -webkit-transform: translate(0, -50%) !important;
+        transform: translate(0, -50%) !important;
+        top: 50%;
+        margin: 0 auto;
+        .modal-body {
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0;
+            max-height: 80vh;
+        }
+    }
+}
+
+_:-ms-lang(x),
+.customer-detail {
+    .customer-popup-img {
+        display: block;
+        img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+        }
+    }
+}
+
+@media screen and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .customer-detail {
+        .customer-popup-img {
+            display: block;
+            img {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+            }
+        }
+        .hoval-img {
+            img {
+                width: 89%;
+                margin: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+    .modal-open .modal {
+        overflow: hidden;
+    }
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .customer-detail {
+        .customer-popup-img {
+            display: block;
+            img {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+            }
+        }
+        .hoval-img {
+            img {
+                width: 89%;
+                margin: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+    .modal-open .modal {
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .customer-modal {
+        .modal-dialog {
+            max-width: 90%;
+            .modal-body {
+                height: 85vh;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .customer-detail {
+        h2 {
+            width: 64%;
+            word-break: break-all;
+        }
+        img.bg-img {
+            height: auto;
+            top: -40px;
+            right: -20px;
+            width: 195px;
+        }
+        .customer-popup-img {
+            width: 190px;
+            height: 190px;
+            margin: 0 15px 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .customer-modal {
+        .modal-dialog {
+            .modal-body {
+                padding: 0 0 20px;
+            }
+        }
+    }
+    .customer-detail {
+        padding: 15px;
+        h2 {
+            padding-bottom: 0.5rem;
+            margin: 0 0 0.5rem;
+            width: 56%;
+        }
+        img {
+            &.bg-img {
+                top: -30px;
+                right: -20px;
+                width: 154px;
+                height: 174px;
+            }
+        }
+        .customer-popup-img {
+            width: 144px;
+            height: 144px;
+            margin: 0 10px 15px;
+        }
+        .head-img {
+            .quote {
+                &:before,
+                &:after {
+                    -webkit-transform: scale(0.85);
+                    -o-transform: scale(0.85);
+                    -moz-transform: scale(0.85);
+                    -ms-transform: scale(0.85);
+                    transform: scale(0.85);
+                }
+                &:before {
+                    margin-left: -35px;
+                }
+                &:after {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 567px) {
+    .customer-detail {
+        .share-buttons {
+            .share-icons {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 567px) {
+    .customer-detail {
+        .head-img {
+            img {
+                display: block;
+                margin: 0 auto 20px;
+            }
+            .quote {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .customer-detail {
+        h2 {
+            width: 46%;
+        }
+        img {
+            width: 142px;
+        }
+        .customer-popup-img {
+            width: 135px;
+            height: 135px;
+            margin: 0 10px 15px;
+        }
+        img {
+            &.bg-img {
+                width: 142px;
+                height: 162px;
+                margin: 0 10px 15px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .customer-detail {
+        img {
+            width: 118px;
+        }
+        img {
+            &.bg-img {
+                width: 118px;
+                height: 148px;
+            }
+        }
+        .customer-popup-img {
+            width: 118px;
+            height: 118px;
+        }
+    }
+}
+
+@media screen {
+    #printSection {
+        display: none;
+    }
+}
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact;
+    }
+    * {
+        position: static !important;
+    }
+    body * {
+        display: none;
+    }
+    #printSection,
+    #printSection * {
+        display: block;
+    }
+    .share-buttons {
+        display: none !important;
+    }
+    h2 {
+        position: relative !important;
+    }
+    .customer-detail {
+        img {
+            &.bg-img {
+                position: absolute !important;
+                z-index: -1;
+            }
+        }
+        ul {
+            li {
+                position: relative !important;
+            }
+        }
+        img {
+            &.bg-img {
+                width: 279px !important;
+                height: 375px !important;
+            }
+        }
+        .customer-popup-img {
+            border: 5px $color-primary solid !important;
+            border-radius: 100%;
+            width: 322px !important;
+            height: 313px !important;
+            display: table !important;
+            float: right !important;
+            overflow: hidden !important;
+            background: $color-white !important;
+            z-index: 2 !important;
+            img {
+                width: 100% !important;
+            }
+            p {
+                display: table-cell !important;
+                vertical-align: middle !important;
+            }
+        }
+        .head-img {
+            img {
+                margin: 0 !important;
+                display: inline-block !important;
+                margin-right: 25px !important;
+            }
+            .quote {
+                width: -webkit-calc(100% - 176px) !important;
+                width: calc(100% - 176px) !important;
+                display: inline-block !important;
+                vertical-align: middle !important;
+            }
+        }
+    }
+    .hoval-img {
+        img {
+            display: block !important;
+            max-width: 89% !important;
+            width: 89% !important;
+            margin: 0 auto !important;
+        }
+    }
+}

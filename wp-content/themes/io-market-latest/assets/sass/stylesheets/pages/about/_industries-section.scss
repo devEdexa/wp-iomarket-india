@@ -1,0 +1,138 @@
+.use-content-box {
+    border-radius: 8px;
+    .inner-box {
+        // p {
+        //     opacity: 0.75;
+        // }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: $color-primary;
+            border-radius: 8px;
+            @extend .transiton-03s;
+            z-index: -1;
+        }
+        .icons {
+            background: url(../images/svg/business-sprite.svg);
+            background-repeat: no-repeat;
+            display: inline-block;
+            @extend .transiton-03s;
+        }
+        .use-icon-one {
+            background-position: 0 -152px;
+            width: 91px;
+            height: 90px;
+        }
+        .use-icon-two {
+            background-position: -105px -152px;
+            width: 90px;
+            height: 90px;
+        }
+        .use-icon-three {
+            background-position: -209px -152px;
+            width: 109px;
+            height: 90px;
+        }
+        .use-icon-four {
+            background-position: -332px -152px;
+            width: 91px;
+            height: 90px;
+        }
+        .use-icon-five {
+            background-position: -437px -152px;
+            width: 83px;
+            height: 90px;
+        }
+        .use-icon-six {
+            background-position: -534px -152px;
+            width: 92px;
+            height: 90px;
+        }
+        .use-icon-seven {
+            background-position: -640px -154px;
+            width: 86px;
+            height: 90px;
+        }
+        .use-icon-eight {
+            background-position: -741px -154px;
+            width: 90px;
+            height: 90px;
+        }
+        .use-icon-nine {
+            background-position: -846px -154px;
+            width: 90px;
+            height: 91px;
+        }
+        &:hover {
+            color: $color-white;
+            p {
+                opacity: 1;
+            }
+            .iomarket-arrow-listing {
+                li {
+                    &:before {
+                        background-image: url(../images/svg/arrow-white.svg);
+                    }
+                }
+            }
+            &:after {
+                width: 100%;
+            }
+            .use-icon-one {
+                background-position: 0 -263px;
+            }
+            .use-icon-two {
+                background-position: -105px -263px;
+            }
+            .use-icon-three {
+                background-position: -209px -263px;
+            }
+            .use-icon-four {
+                background-position: -332px -263px;
+            }
+            .use-icon-five {
+                background-position: -437px -263px;
+            }
+            .use-icon-six {
+                background-position: -534px -263px;
+            }
+            .use-icon-seven {
+                background-position: -640px -263px;
+            }
+            .use-icon-eight {
+                background-position: -741px -263px;
+            }
+            .use-icon-nine {
+                background-position: -846px -263px;
+            }
+        }
+    }
+}
+
+.industries-section-row {
+    margin-bottom: -1rem;
+}
+
+@media only screen and (max-width: 991px) {
+    .use-content-box {
+        .inner-box {
+            .icons {
+                transform: scale(0.6);
+                transform-origin: 0 0;
+            }
+            .inner-box-title {
+                margin-top: -20px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .industries-section-row {
+        margin-bottom: -1.5rem;
+    }
+}

@@ -1,0 +1,197 @@
+.blog-details {
+    @extend .fs-5;
+    .pdf-icon {
+        width: 36px;
+        height: 36px;
+    }
+    iframe {
+        margin: auto;
+        display: block;
+        width: 750px;
+        max-width: 100%;
+        height: 420px;
+    }
+    .quote-section {
+        .quote-text {
+            max-width: 90%;
+        }
+    }
+    h5 {
+        @extend .fs-5;
+        @extend .mt-5;
+        @extend .mb-3;
+    }
+    h4 {
+        @extend .fs-3;
+        @extend .mt-5;
+        @extend .mb-3;
+        @extend .font-bold;
+    }
+    >h4,
+    h5 {
+        &:first-child {
+            margin-top: 0 !important;
+        }
+    }
+    .form-section {
+        .profile-box {
+            .profile-image {
+                width: 220px;
+                height: 220px;
+            }
+        }
+    }
+    .form-box {
+        &:before {
+            width: 70px;
+            height: 105px;
+        }
+    }
+    .contact-form {
+        .form-field {
+            margin-bottom: 20px;
+            input,
+            textarea {
+                padding: 10px 15px;
+            }
+        }
+        .submit-field {
+            input {
+                padding: 5px 12px;
+            }
+        }
+    }
+    .download-pdf {
+        height: 140px;
+        box-shadow: 0 0 15px 5px rgba(209, 209, 209, 0.3);
+        .image-part {
+            width: 180px;
+            img {
+                width: 75%;
+            }
+        }
+        .content-part {
+            width: calc(100% - 180px);
+        }
+        .download-icon {
+            width: 30px;
+            margin-right: 8px;
+        }
+    }
+    .slick-list {
+        margin: 0 -8px;
+        .msacwl-carousel-slide {
+            margin: 0 8px;
+            button {
+                &.slick-arrow {
+                    z-index: 2;
+                    background: $color-darkgray url(../images/arrow-left.png) center center no-repeat !important;
+                    &:hover {
+                        background: $color-primary url(../images/arrow-left.png) center center no-repeat !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blog-sidebar {
+    position: sticky;
+    .link-box {
+        .share-icon {
+            list-style: none;
+            border-radius: 1.875rem;
+            min-height: 32px;
+            background-color: $color-gray-background;
+            li {
+                vertical-align: middle;
+                a {
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1399px) {
+    .blog-details {
+        .form-section {
+            .profile-box {
+                .profile-image {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+        .form-box {
+            &:before {
+                width: 60px;
+                height: 85px;
+            }
+        }
+        .contact-form {
+            .submit-field {
+                input {
+                    padding: 3px 10px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .blog-details {
+        iframe {
+            width: 550px;
+            height: 310px;
+        }
+        .form-box {
+            &:before {
+                width: 40px;
+                height: 55px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .download-pdf {
+        .image-part {
+            img {
+                width: 130px;
+                margin: 0px 10px;
+            }
+        }
+    }
+    .blog-sidebar {
+        position: static;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .blog-details {
+        iframe {
+            width: 340px;
+            height: 190px;
+        }
+        .form-box {
+            &:before {
+                width: 30px;
+                height: 35px;
+            }
+        }
+        .download-pdf {
+            .image-part {
+                width: 130px;
+                img {
+                    width: 90%;
+                }
+            }
+            .content-part {
+                font-size: 14px;
+                width: calc(100% - 130px);
+            }
+        }
+    }
+}

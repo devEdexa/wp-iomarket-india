@@ -1,0 +1,8 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14" width="20" height="14">
+	<title>arrow-slider-prev</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #383838 } 
+	</style>
+	<path id="Layer" fill-rule="evenodd" class="shp0" d="M20 5.6L5.3 5.6L10.9 0L7 0L0 7L6.9 14L10.9 14L5.3 8.4L20 8.4L20 5.6Z" />
+</svg>

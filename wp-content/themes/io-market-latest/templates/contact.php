@@ -22,7 +22,7 @@
                             alt="contact person">
                         <?php } else { ?>
                         <img class="rounded-circle"
-                            src="<?php echo get_template_directory_uri(); ?>/assets/images/team/andrea-zeller.jpg"
+                            src="<?php echo get_template_directory_uri(); ?>/assets/images/team/BENSON.jpg"
                             alt="Andrea Zeller">
                         <?php } ?>
 

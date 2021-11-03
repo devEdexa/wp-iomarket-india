@@ -1,0 +1,75 @@
+.vision-quote {
+    padding: 100px 40px 100px;
+    span {
+        letter-spacing: 0.3px;
+        &:before {
+            content: "";
+            position: absolute;
+            background-image: url(../images/quote-1.png);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            width: 35px;
+            height: 25px;
+            top: auto;
+            left: auto;
+            margin: -20px 0 0 -40px;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            background-image: url(../images/quote-2.png);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            width: 35px;
+            height: 28px;
+            right: auto;
+            bottom: auto;
+            margin: 20px 0 0 10px;
+        }
+    }
+    &:after {
+        content: "";
+        background: url(../images/gray-pattern.jpg);
+        background-position: center center;
+        background-repeat: repeat;
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        width: 1000vw;
+        left: -100%;
+        z-index: -1;
+    }
+}
+
+@media only screen and (max-width: 1399px) {
+    .vision-section {
+        .vision-quote {
+            padding: 70px 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .vision-section {
+        .vision-quote {
+            padding: 50px 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .vision-quote {
+        span {
+            &:before {
+                width: 25px;
+                height: 20px;
+                margin: -15px 0 0 -30px;
+            }
+            &:after {
+                width: 25px;
+                height: 20px;
+                margin: 20px 0 0 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+.team-section {
+    .team-slider {
+        .item {
+            min-width: 25%;
+            width: 25%;
+            .round-box-wrapper {
+                background: transparent;
+                border-radius: 100%;
+                margin: 0 auto;
+                .round-box {
+                    width: 246px;
+                    height: 246px;
+                    border: 4px $color-primary solid;
+                }
+            }
+            .social-media {
+                a {
+                    & ~ a {
+                        margin-left: 10px;
+                    }
+                    img {
+                        width: auto;
+                        margin: auto;
+                    }
+                    &:hover {
+                        img {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .edexa-unser-advisory-board {
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 1399px) {
+    .team-section {
+        .team-slider {
+            .item {
+                .round-box-wrapper {
+                    .round-box {
+                        width: 220px;
+                        height: 220px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .team-section {
+        .team-slider {
+            .item {
+                min-width: 33.3333%;
+                width: 33.3333%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .team-section {
+        .team-slider {
+            .item {
+                min-width: 50%;
+                width: 50%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 575px) {
+    .team-section {
+        .team-slider {
+            .item {
+                min-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

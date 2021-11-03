@@ -1,0 +1,158 @@
+.solution-section {
+    background: url(../images/gray-pattern.jpg);
+    background-position: center center;
+}
+
+.solution-slider {
+    .item {
+        width: 33.3333%;
+        .solution-box {
+            background: $color-white;
+            -webkit-box-shadow: 1.5px 2.598px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 1.5px 2.598px 15px rgba(0, 0, 0, 0.1);
+            .icon {
+                background: $color-white;
+                width: 100px;
+                height: 100px;
+                box-shadow: 1.5px 2.598px 15px rgba(0, 0, 0, 0.1);
+                top: -50px;
+                right: 30px;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    background: url("../images/svg/business.svg") no-repeat;
+                    z-index: 2;
+                }
+                &.platform:before {
+                    width: 64px;
+                    height: 33px;
+                    background-position: 0px -14px;
+                }
+                &.service:before {
+                    width: 57px;
+                    height: 60px;
+                    background-position: -79px 0;
+                }
+                &.application:before {
+                    width: 48px;
+                    height: 60px;
+                    background-position: -151px 0;
+                }
+                &.government:before {
+                    width: 40px;
+                    height: 60px;
+                    background-position: -696px 0;
+                }
+                &.health:before {
+                    width: 61px;
+                    height: 60px;
+                    background-position: -532px 0;
+                }
+                &.fintech:before {
+                    width: 54px;
+                    height: 60px;
+                    background-position: -622px 0;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    background: $color-primary;
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                    @extend .transiton-03s;
+                    z-index: 1;
+                    border-radius: 100%;
+                }
+            }
+            .box-title {
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 80px;
+                    height: 2px;
+                    background: $color-black;
+                    margin-top: 10px;
+                }
+            }
+            &:hover {
+                .icon {
+                    &.platform:before {
+                        background-position: 0 -84px;
+                    }
+                    &.service:before {
+                        background-position: -79px -70px;
+                    }
+                    &.application:before {
+                        background-position: -151px -70px;
+                    }
+                    &.government:before {
+                        background-position: -696px -71px;
+                    }
+                    &.health:before {
+                        background-position: -532px -71px;
+                    }
+                    &.fintech:before {
+                        background-position: -622px -71px;
+                    }
+                    &:after {
+                        -webkit-transform: scale(1);
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .solution-slider {
+        .item {
+            .solution-box {
+                .icon {
+                    -webkit-transform: scale(0.8);
+                    transform: scale(0.8);
+                    transform-origin: right;
+                    right: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .solution-slider {
+        .item {
+            width: 100%;
+        }
+        .owl-stage-outer,
+        .owl-item,
+        .owl-stage {
+            display: flex !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .solution-slider {
+        .item {
+            width: 100%;
+            .solution-box {
+                .icon {
+                    -webkit-transform: scale(0.7);
+                    transform: scale(0.7);
+                    transform-origin: right;
+                }
+            }
+        }
+    }
+}

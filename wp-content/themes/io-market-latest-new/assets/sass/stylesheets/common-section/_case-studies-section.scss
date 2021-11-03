@@ -1,0 +1,82 @@
+.case-studies-section {
+    .case-studies-slider {
+        .item {
+            width: 33.3333%;
+            padding: 0 15px;
+            .case-box {
+                .case-info {
+                    top: 0;
+                    width: 90%;
+                    height: 90%;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: $color-white;
+                        opacity: 0.95;
+                    }
+                    .case-title {
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            height: 1px;
+                            width: 163px;
+                            background: $color-primary;
+                        }
+                    }
+                    p {
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .case-studies-section {
+        .case-studies-slider {
+            .item {
+                .case-box {
+                    .case-info {
+                        width: 95%;
+                        height: 95%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .case-studies-section {
+        .case-studies-slider {
+            .item {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .case-studies-section {
+        .case-studies-slider {
+            .item {
+                .case-box {
+                    max-width: 310px;
+                    width: 100%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,133 @@
+.blog-section {
+    .blog-from-main {
+        .blog-box {
+            .blog-box-item {
+                background: $color-white;
+                border: 1px $color-gray-border solid;
+                box-shadow: 0 0 15px 5px rgba(209, 209, 209, 0.3);
+                img {
+                    transition: transform 0.35s;
+                    transform-origin: 50% 50%;
+                    opacity: 0.95;
+                    width: 100%;
+                    height: 215px;
+                    object-fit: cover;
+                }
+                .blog-info-box {
+                    .heading-main {
+                        a {
+                            &.heading {
+                                letter-spacing: 0;
+                                color: $color-black;
+                                &:before {
+                                    position: absolute;
+                                    top: 100%;
+                                    width: 35px;
+                                    height: 2px;
+                                    left: 0;
+                                    content: "";
+                                    background: $color-primary;
+                                }
+                                &:hover {
+                                    color: $color-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    img {
+                        transform: scale3d(0.95, 0.92, 1);
+                    }
+                }
+                .share-button {
+                    text-align: right;
+                    width: 84%;
+                    bottom: 50px;
+                    &:before {
+                        content: "";
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 75%;
+                        height: 1px;
+                        background: $color-gray-background;
+                        margin-right: 0.75rem;
+                    }
+                    .share-box {
+                        a {
+                            &.share {
+                                background: $color-primary url(../images/svg/share.svg) no-repeat center center;
+                                border-radius: 1.875rem;
+                                line-height: 2.375rem;
+                                vertical-align: middle;
+                                cursor: pointer;
+                                width: 20px;
+                                height: 20px;
+                                z-index: 2;
+                                &:hover {
+                                    background-color: $color-primary;
+                                }
+                            }
+                        }
+                        .share-icon {
+                            width: 200px;
+                            right: -180px;
+                            top: 0;
+                            list-style: none;
+                            z-index: 1;
+                            visibility: hidden;
+                            opacity: 0;
+                            border-radius: 1.875rem;
+                            min-height: 32px;
+                            background-color: $color-gray-background;
+                            z-index: 1;
+                            text-align: left;
+                            li {
+                                vertical-align: middle;
+                                a {
+                                    width: 26px;
+                                    height: 26px;
+                                }
+                            }
+                        }
+                        &:hover {
+                            border-radius: 1.875rem;
+                            .share-icon {
+                                opacity: 1;
+                                visibility: visible;
+                                right: 15px;
+                            }
+                        }
+                    }
+                }
+                a {
+                    &.read-more {
+                        color: $color-black;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        left: 0;
+                        bottom: 0;
+                        width: 85%;
+                        &:hover {
+                            color: $color-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    a {
+        color: $color-primary;
+        @extend .transiton-03s;
+        &:hover {
+            color: $color-gray;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .blog-from-main {
+        margin-bottom: -1.5rem;
+    }
+}

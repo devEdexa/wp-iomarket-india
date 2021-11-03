@@ -1,0 +1,95 @@
+.solution-box {
+    .icon {
+        &:before {
+            background: url("../images/svg/business-sprite.svg") no-repeat;
+        }
+        &.home-boxicon-1 {
+            &:before {
+                width: 60px;
+                height: 60px;
+                background-position: 0 0;
+            }
+        }
+        &.home-boxicon-2 {
+            &:before {
+                width: 50px;
+                height: 60px;
+                background-position: -75px 0;
+            }
+        }
+        &.home-boxicon-3 {
+            &:before {
+                width: 45px;
+                height: 60px;
+                background-position: -139px 0;
+            }
+        }
+        &.home-boxicon-4 {
+            &:before {
+                width: 60px;
+                height: 59px;
+                background-position: -199px 0;
+            }
+        }
+        &.home-boxicon-5 {
+            &:before {
+                width: 61px;
+                height: 47px;
+                background-position: -348px 0;
+            }
+        }
+        &.home-boxicon-6 {
+            &:before {
+                width: 61px;
+                height: 60px;
+                background-position: -423px 0;
+            }
+        }
+        &.home-boxicon-7 {
+            &:before {
+                width: 61px;
+                height: 60px;
+                background-position: -423px 0;
+            }
+        }
+    }
+    &:hover {
+        .icon {
+            &.home-boxicon-1 {
+                &:before {
+                    background-position: 0 -72px;
+                }
+            }
+            &.home-boxicon-2 {
+                &:before {
+                    background-position: -75px -72px;
+                }
+            }
+            &.home-boxicon-3 {
+                &:before {
+                    background-position: -139px -72px;
+                }
+            }
+            &.home-boxicon-4 {
+                &:before {
+                    background-position: -199px -73px;
+                }
+            }
+            &.home-boxicon-5 {
+                &:before {
+                    background-position: -348px -85px;
+                }
+            }
+            &.home-boxicon-6 {
+                &:before {
+                    background-position: -423px -72px;
+                }
+            }
+            &.home-boxicon-7 {
+                &:before {
+                    background-position: -423px -72px;
+                }
+            }
+        }
+    }
+}

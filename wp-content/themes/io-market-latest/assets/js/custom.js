@@ -12,7 +12,9 @@ $(document).scroll(function () {
 });
 
 $(document).ready(function () {
+
     
+
     if ($(window).width() < 797) {
         $('.page-template-edi-network .banner-text .green-color').each(function() {
             var text = $(this).text();
@@ -80,6 +82,43 @@ $(document).ready(function () {
     $(".close-menu, .menu-bg-layer").click(function () {
         $(".mobile-menu-toggle").trigger("click")
     });
+
+    if ($('*').hasClass('typewriter-text')) {
+        typing(0, $('.typewriter-text').data('text'));
+    }
+    
+    function typing(index, text) {
+        var textIndex = 1;
+        var tmp = setInterval(function() {
+            if (textIndex < text[index].length + 1) {
+                $('.typewriter-text').text(text[index].substr(0, textIndex));
+                textIndex++;
+            } else {
+                setTimeout(function() {
+                    backed(index, text)
+                }, 2000);
+                clearInterval(tmp);
+            }
+        }, 150);
+    }
+
+    function backed(index, text) {
+        var textIndex = text[index].length;
+        var tmp = setInterval(function() {
+            if (textIndex + 1 > 0) {
+                $('.typewriter-text').text(text[index].substr(0, textIndex));
+                textIndex--;
+            } else {
+                index++;
+                if (index == text.length) {
+                    index = 0;
+                }
+                typing(index, text);
+                clearInterval(tmp);
+            }
+        }, 0)
+    }
+
 
     // Network section start
 

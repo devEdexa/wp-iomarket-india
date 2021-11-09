@@ -58,7 +58,7 @@ if(!empty($about_io_title) || !empty($about_io_description) || !empty($we_offer)
 <section class="iomarket-section quote-section position-relative">
     <div class="container">
         <div class="quote-text text-center p-md-5 p-4 m-auto fs-3 font-black position-relative white-color">
-            <span ><?php the_field('invest_sec'); ?></span> Alexander Moser, Laveba
+            <span ><?php the_field('invest_sec'); ?></span><p>Alexander Moser, Laveba</p>
         </div>
     </div>
 </section>
@@ -88,7 +88,7 @@ if(!empty($our_solutions_title) || !empty($our_solutions_description) || !empty(
                     class="d-block solution-box position-relative h-100 pt-5 pb-xl-5 pb-4 px-xl-4 px-3 darkgray-color"
                     title="<?php echo $solution_title; ?>">
                     <div class="icon rounded-circle position-absolute home-boxicon-<?php echo $i;?>"></div>
-                    <div class="box-title fs-4 mb-xl-4 mb-3 font-semibold text-break"><?php echo $solution_title; ?>
+                    <div class="box-title fs-5 mb-xl-4 mb-3 font-semibold text-break mt-2"><?php echo $solution_title; ?>
                     </div>
                     <p class="fs-6 mb-3"><?php echo $solution_description; ?></p>
                     <ul class="iomarket-listing fs-6 gray-color">
@@ -275,43 +275,3 @@ if ( $newpost->have_posts() ) :
 
 
 <?php get_footer();?>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    // typing effect start
-    typing(0, $('.typewriter-text').data('text'));
-
-    function typing(index, text) {
-        var textIndex = 1;
-        var tmp = setInterval(function() {
-            if (textIndex < text[index].length + 1) {
-                $('.typewriter-text').text(text[index].substr(0, textIndex));
-                textIndex++;
-            } else {
-                setTimeout(function() {
-                    backed(index, text)
-                }, 2000);
-                clearInterval(tmp);
-            }
-        }, 150);
-    }
-
-    function backed(index, text) {
-        var textIndex = text[index].length;
-        var tmp = setInterval(function() {
-            if (textIndex + 1 > 0) {
-                $('.typewriter-text').text(text[index].substr(0, textIndex));
-                textIndex--;
-            } else {
-                index++;
-                if (index == text.length) {
-                    index = 0;
-                }
-                typing(index, text);
-                clearInterval(tmp);
-            }
-        }, 0)
-    }
-    // typing effect end
-});
-</script>

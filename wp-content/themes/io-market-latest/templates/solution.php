@@ -32,12 +32,12 @@ $count = 1;
             if($count % 2 == 0){
                 ?>
                 <div class="row mt-5">
-                    <div class="col-md-5 col-sm-12 col-xs-12 d-md-block d-none">
+                    <div class="col-md-5 col-sm-12 col-xs-12 d-md-block d-none <?php echo ($count == 1) ? '': 'mt-5'; ?>">
                         <div class="icon-box">
                             <img src="<?php echo $main_sol_upload_image['url']; ?>">
                         </div>
                     </div>
-                    <div class="col-md-7 col-sm-12 col-xs-12 mb-md-3">
+                    <div class="col-md-7 col-sm-12 col-xs-12 mb-md-3 <?php echo ($count == 1) ? '': 'mt-5'; ?>">
                        <div class="network-title d-flex align-items-md-center  display-4 green-color font-black text-uppercase  mb-4">
                         <span class="me-2"
                                 title="<?php echo sprintf('%02d', $count); ?>"><?php echo sprintf('%02d', $count); ?></span>
@@ -48,7 +48,7 @@ $count = 1;
                 </div>
             <?php } else{ ?> 
                 <div class="row mt-5">
-                    <div class="col-md-7 col-sm-12 col-xs-12 mb-md-3">
+                    <div class="col-md-7 col-sm-12 col-xs-12 mb-md-3 <?php echo ($count == 1) ? '': 'mt-5'; ?>">
                        <div class="network-title d-flex align-items-md-center  display-4 green-color font-black text-uppercase  mb-4">
                         <span class="me-2"
                                 title="<?php echo sprintf('%02d', $count); ?>"><?php echo sprintf('%02d', $count); ?></span>
@@ -56,7 +56,7 @@ $count = 1;
                         </div>
                      <?php  echo $main_sol_add_short_detail; ?>
                     </div>
-                    <div class="col-md-5 col-sm-12 col-xs-12 d-md-block d-none">
+                    <div class="col-md-5 col-sm-12 col-xs-12 d-md-block d-none <?php echo ($count == 1) ? '': 'mt-5'; ?>">
                         <div class="icon-box">
                             <img src="<?php echo $main_sol_upload_image['url']; ?>">
                         </div>

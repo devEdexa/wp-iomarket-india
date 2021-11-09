@@ -62,7 +62,7 @@
                         <strong class="fs-5 black-color mb-sm-0 mb-2 me-sm-2"><?php the_field('address_label'); ?>
                         </strong>
                         <a class="gray-color hover-green-color" target="_blank"
-                            href="https://goo.gl/maps/Qcf4sx9bte7LapTB6"
+                            href="https://goo.gl/maps/pRcibk2LboBdRjWLA"
                             target="_blank"><?php the_field('address_detail'); ?>
                         </a>
                     </div>

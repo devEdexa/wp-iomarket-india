@@ -103,12 +103,12 @@
                     <?php  $file  = get_sub_field('attach_job_pdf'); 
 							            if( !empty($file) ): ?>
                     <a href="<?php echo $file['url']; ?>" target="_blank"
-                        class="black-color iom-button fs-5 rounded-pill" title="<?php echo $apply_now_label;?>">
+                        class="black-color iom-button fs-8 rounded-pill" title="<?php echo $apply_now_label;?>">
                         <?php echo $apply_now_label;?>
                         <span class="btn-icon trans"></span>
                     </a>
                     <?php else:?>
-                    <a href="mailto:contact@io-market.com" class="black-color iom-button fs-5 rounded-pill"
+                    <a href="mailto:contact@io-market.com" class="black-color iom-button fs-8 rounded-pill"
                         title="<?php echo $apply_now_label;?>">
                         <?php echo $apply_now_label;?>
                         <span class="btn-icon trans"></span>
@@ -122,42 +122,3 @@
     </div>
 </section>
 <?php get_footer();?>
-<script type="text/javascript">
-$(document).ready(function() {
-    // typing effect start
-    typing(0, $('.typewriter-text').data('text'));
-
-    function typing(index, text) {
-        var textIndex = 1;
-        var tmp = setInterval(function() {
-            if (textIndex < text[index].length + 1) {
-                $('.typewriter-text').text(text[index].substr(0, textIndex));
-                textIndex++;
-            } else {
-                setTimeout(function() {
-                    backed(index, text)
-                }, 2000);
-                clearInterval(tmp);
-            }
-        }, 150);
-    }
-
-    function backed(index, text) {
-        var textIndex = text[index].length;
-        var tmp = setInterval(function() {
-            if (textIndex + 1 > 0) {
-                $('.typewriter-text').text(text[index].substr(0, textIndex));
-                textIndex--;
-            } else {
-                index++;
-                if (index == text.length) {
-                    index = 0;
-                }
-                typing(index, text);
-                clearInterval(tmp);
-            }
-        }, 0)
-    }
-    // typing effect end
-});
-</script>

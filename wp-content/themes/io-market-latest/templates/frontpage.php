@@ -42,7 +42,7 @@ if(!empty($about_io_title) || !empty($about_io_description) || !empty($we_offer)
                     <?php } ?>
                     <?php echo $we_offer_description; ?>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 ps-md-5">
                     <?php if(!empty($we_offer_2)) { ?>
                     <div class="list-title fs-3 lightgray-color font-black text-uppercase mb-md-3 mb-2">
                         <?php echo $we_offer_2; ?>

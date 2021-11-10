@@ -26,7 +26,7 @@ if(!empty($about_io_title) || !empty($about_io_description) || !empty($we_offer)
             <div class="row">
                 <div class="col-xl-7">
                     <?php if(!empty($about_io_description)) { ?>
-                    <p class="section-discription fs-3 darkgray-color mb-xl-4 mb-3">
+                    <p class="section-discription fs-4 darkgray-color mb-xl-4 mb-3">
                         <?php echo $about_io_description; ?>
                     </p>
                     <?php } ?>
@@ -68,7 +68,7 @@ $our_solutions_description = get_field('our_solutions_description');
 $our_solutions = get_field('our_solutions');
 if(!empty($our_solutions_title) || !empty($our_solutions_description) || !empty($our_solutions)) {
  ?>
-<section class="iomarket-section solution-section dot-bg">
+<section class="iomarket-section solution-section gray-bg">
     <div class="container">
         <div class="section-title display-5 green-color font-black mb-md-4 mb-3"><?php echo $our_solutions_title; ?>
         </div>

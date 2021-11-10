@@ -44,7 +44,7 @@
         </div>
     </div>
 </section>
-<section class="iomarket-section industries-section">
+<section class="iomarket-section industries-section gray-bg">
     <div class="container">
         <div class="section-title display-5 green-color font-black mb-md-4 mb-3">
             <?php the_field('emp_heading'); ?>

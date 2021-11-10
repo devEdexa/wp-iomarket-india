@@ -31,7 +31,7 @@ $count = 1;
                 $main_sol_upload_image = get_field('main_sol_upload_image'); 
             if($count % 2 == 0){
                 ?>
-                <div class="row mt-5">
+                <div class="row mt-5 mt-space">
                     <div class="col-md-5 col-sm-12 col-xs-12 d-md-block d-none <?php echo ($count == 1) ? '': 'mt-5'; ?>">
                         <div class="icon-box">
                             <img src="<?php echo $main_sol_upload_image['url']; ?>">
@@ -47,7 +47,7 @@ $count = 1;
                     </div>
                 </div>
             <?php } else{ ?> 
-                <div class="row mt-5">
+                <div class="row mt-5 mt-space">
                     <div class="col-md-7 col-sm-12 col-xs-12 mb-md-3 <?php echo ($count == 1) ? '': 'mt-5'; ?>">
                        <div class="network-title d-flex align-items-md-center  display-4 green-color font-black text-uppercase  mb-4">
                         <span class="me-2"

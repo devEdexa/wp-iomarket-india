@@ -36,7 +36,7 @@
         </div>
     </div>
 </section>
-<section class="iomarket-section history-section fs-5">
+<section class="iomarket-section history-section fs-5 gray-bg">
     <div class="container">
         <div class="section-title display-5 green-color font-black mb-md-4 mb-3">
             <?php the_field('history_head'); ?></div>
@@ -157,7 +157,7 @@
     </div>
 </section>
 
-<section class="iomarket-section industries-section dot-bg">
+<section class="iomarket-section industries-section gray-bg">
     <div class="container">
         <div class="section-title display-5 green-color font-black mb-md-4 mb-3">
             <?php the_field('value_heading'); ?>
@@ -195,7 +195,7 @@
         </div>
     </div>
 </section>
-<section class="iomarket-section customer-section gray-bg">
+<section class="iomarket-section customer-section ">
     <div class="container">
         <div class="section-title display-5 green-color font-black mb-md-4 mb-3">
             <?php the_field('logo_customer_title'); ?>

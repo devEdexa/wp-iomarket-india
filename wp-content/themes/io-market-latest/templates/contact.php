@@ -44,7 +44,7 @@
         </div>
     </div>
 </section>
-<section class="iomarket-section contact-section dot-bg">
+<section class="iomarket-section contact-section gray-bg">
     <div class="container">
         <div class="section-title display-5 green-color font-black mb-md-4 mb-3">
             <?php the_field('contact_heading_label'); ?>

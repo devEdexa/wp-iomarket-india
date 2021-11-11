@@ -116,64 +116,43 @@
 <section class="iomarket-section opportunities-section gray-bg">
     <div class="container">
         <div class="section-title display-5 green-color font-black mb-md-4 mb-3">
-            OUR OFFICES
+            <?php echo get_field('offices_title'); ?>
         </div>
         <div class="d-flex align-items-stretch flex-wrap owl-carousel solution-slider about-solution-slider">
+        <?php  if( have_rows('offices_maps') ): while( have_rows('offices_maps') ): the_row(); 
+            $website_url = get_sub_field('website_url');
+            ?>
             <div class="item px-lg-3 mt-5 mb-lg-4 mb-3">
-                <a href="javascript:;">
+                <a href="<?php echo !empty( $website_url ) ? $website_url['url'] : 'javascript:;' ;?>" target="<?php echo !empty( $website_url ) ? $website_url['target'] : '' ;?>">
                     <div class="map position-relative h-100 ">
                         <div class="contact-map">
-                        <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5061493.622573362!2d75.6468613467123!3d10.488484420432352!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7a2b297af3f7d633!2sio-market%20software%20services%20pvt.ltd.!5e0!3m2!1sen!2sin!4v1636541022102!5m2!1sen!2sin"
-                        width="100%" height="394" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                        <iframe src="<?php echo get_sub_field('offices_maps_iframe_src'); ?>" width="100%" height="394" frameborder="0" style="border:0" allowfullscreen=""></iframe>
                         <div class="text-center pt-3 pb-2">
-                            <h3>Kochi, Kerala</h3>
-                            <p class="p-0 m-0 fs-5">+91 480 273 2738</p>
-                            <p class="p-0 m-0 fs-5">contact@iomarket.in</p>
+                            <h3><?php echo get_sub_field('offices_maps_office_name'); ?></h3>
+                            <p class="p-0 m-0 fs-5"><?php echo get_sub_field('offices_maps_mobile_number'); ?></p>
+                            <p class="p-0 m-0 fs-5"><?php echo get_sub_field('offices_maps_email_id'); ?></p>
                         </div>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="item px-lg-3 mt-5 mb-lg-4 mb-3">
-                <a href="javascript:;">
-                    <div class="map position-relative h-100 ">
-                        <div class="contact-map">
-                        <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691202.1333179204!2d71.66297316217478!3d25.38171803105038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b4d8ca87c7d%3A0x635c26516e67f223!2sAvadhesh%20House%2C%20Bodakdev%2C%20Ahmedabad%2C%20Gujarat%20380053!5e0!3m2!1sen!2sin!4v1636541841939!5m2!1sen!2sin"
-                        width="100%" height="394" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                        <div class="text-center pt-3 pb-2">
-                            <h3>Ahmedabad, Gujarat</h3>
-                            <p class="p-0 m-0 fs-5">+91 9328572745</p>
-                            <p class="p-0 m-0 fs-5">hr@edexa.com</p>
-                        </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="item px-lg-3 mt-5 mb-lg-4 mb-3">
-                <a href="https://www.io-market.com/" target="_blank">
-                    <div class="map position-relative h-100 ">
-                        <div class="contact-map">
-                        <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1393579.5150196871!2d6.802157664576643!3d46.98457557620155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b33e678b6fddd%3A0x434d571d3aecfa38!2sKanalstrasse%2032%2C%209490%20Vaduz%2C%20Liechtenstein!5e0!3m2!1sen!2sin!4v1636541562970!5m2!1sen!2sin"
-                        width="100%" height="394" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                        <div class="text-center pt-3 pb-2">
-                            <h3>Vaduz, Liechtenstein</h3>
-                            <p class="p-0 m-0 fs-5">+423 238 10 00</p>
-                            <p class="p-0 m-0 fs-5">contact@iomarket.in</p>
-                        </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+        <?php  endwhile; endif; ?>
         </div>
     </div>
 </section>
 
-<section class="iomarket-section industries-section ">
+<section class="iomarket-section marquee-hero">
     <div class="container">
         <div class="section-title display-5 green-color font-black mb-md-4 mb-3">
+            <?php echo get_field('slide_team_title'); ?>
+        </div>
+    </div>
+    <div class="marquee"></div>
+</section>
+
+<section class="iomarket-section industries-section ">
+    <div class="container">
+        <div class="section-title display-5 green-color font-black mb-md-4 mb-5">
             <?php the_field('value_heading'); ?>
         </div>
         <div class="row industries-section-row">

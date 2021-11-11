@@ -78,7 +78,46 @@
         </div>
     </div>
 </section>
-<section class="iomarket-section opportunities-section">
+<?php 
+$satisfied_costumers_title = get_field('satisfied_costumers_title');
+$satisfied_costumers = get_field('satisfied_costumers');
+if(!empty($satisfied_costumers_title) || !empty($satisfied_costumers)) {?>
+<section class="iomarket-section costumers-section">
+    <div class="container">
+        <?php if(!empty($satisfied_costumers_title)) { ?>
+        <div class="section-title display-5 green-color font-black mb-md-4 mb-3">
+            <?php echo $satisfied_costumers_title; ?></div>
+        <?php } ?>
+        <?php if(have_rows('satisfied_costumers')) :?>
+        <div id="costumers-carousel" class="owl-carousel">
+            <?php while(have_rows('satisfied_costumers')) : the_row(); 
+                $customer_profile_photo = get_sub_field('customer_profile_photo');
+                $profile_url = $customer_profile_photo['sizes']['profilepic'];
+                $customer_name = get_sub_field('customer_name');
+                $customer_designation = get_sub_field('customer_designation');
+                $about_customer = get_sub_field('about_customer');
+                if(!empty($customer_profile_photo) || !empty($customer_name) || !empty($customer_designation) || !empty($about_customer)){?>
+            <div class="item justify-content-center d-flex flex-wrap">
+                <img src="<?php echo $profile_url; ?>" width="206" height="206" alt="profile"
+                    class="w-50 h-auto pb-sm-0 pb-3">
+                <div class="text-center pt-sm-3 pe-sm-3 ps-sm-3">
+                    <div class="title lightgray-color fs-4 font-bold pb-md-4 pb-3">
+                        <?php echo $customer_name; ?>
+                        <span class="d-block"><?php echo $customer_designation; ?></span>
+                    </div>
+                    <?php if(!empty($about_customer)) { ?>
+                    <div class="subtext fs-6 "><?php echo $about_customer; ?></div>
+                    <?php } ?>
+                </div>
+            </div>
+            <?php } ?>
+            <?php endwhile; ?>
+        </div>
+        <?php endif; ?>
+    </div>
+</section>
+<?php } ?>
+<section class="iomarket-section opportunities-section gray-bg">
     <div class="container">
         <div class="section-title display-5 green-color font-black mb-md-4 mb-3">
             <?php the_field('career_heading'); ?>

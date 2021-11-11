@@ -113,51 +113,65 @@
         </div>
     </div>
 </section> -->
-<section class="iomarket-section opportunities-section">
+<section class="iomarket-section opportunities-section gray-bg">
     <div class="container">
         <div class="section-title display-5 green-color font-black mb-md-4 mb-3">
-            <?php the_field('career_heading'); ?>
+            OUR OFFICES
         </div>
-        <div class="owl-carousel opportunities-carousel"> <?php   if( have_rows('add_vacancy') ): while( have_rows('add_vacancy') ): the_row(); 
-				$career_job_title = get_sub_field('career_job_title');$career_shortline = get_sub_field('career_shortline');
-				$apply_now_label = get_sub_field('apply_now_label');
-				$career_upload_image = get_sub_field('career_upload_image');?>
-
-            <div
-                class="career-box transiton-03s white-bg position-relative h-100 d-flex flex-column justify-content-start pb-xl-4 pb-3">
-                <div class="career-img">
-                    <img class="transiton-03s w-100" src="<?php echo $career_upload_image['url']; ?>"
-                        alt="<?php echo $career_upload_image['alt'] ?>">
-                </div>
-                <div class="career-content gray-color pt-3 px-xl-4 px-3 mb-xl-4 mb-3">
-                    <div class="career-title position-relative font-bold black-color mb-3 pb-2 fs-5">
-                        <?php echo $career_job_title;?></div>
-                    <p class="font-light"> <?php echo $career_shortline;?> </p>
-                </div>
-                <div class="career-button px-xl-4 px-3 mt-auto">
-                    <?php  $file  = get_sub_field('attach_job_pdf'); 
-							            if( !empty($file) ): ?>
-                    <a href="<?php echo $file['url']; ?>" target="_blank"
-                        class="black-color iom-button fs-5 rounded-pill" title="<?php echo $apply_now_label;?>">
-                        <?php echo $apply_now_label;?>
-                        <span class="btn-icon trans"></span>
-                    </a>
-                    <?php else:?>
-                    <a href="mailto:contact@io-market.com" class="black-color iom-button fs-5 rounded-pill"
-                        title="<?php echo $apply_now_label;?>">
-                        <?php echo $apply_now_label;?>
-                        <span class="btn-icon trans"></span>
-                    </a>
-                    <?php endif;?>
-                </div>
+        <div class="d-flex align-items-stretch flex-wrap owl-carousel solution-slider about-solution-slider">
+            <div class="item px-lg-3 mt-5 mb-lg-4 mb-3">
+                <a href="javascript:;">
+                    <div class="map position-relative h-100 ">
+                        <div class="contact-map">
+                        <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5061493.622573362!2d75.6468613467123!3d10.488484420432352!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7a2b297af3f7d633!2sio-market%20software%20services%20pvt.ltd.!5e0!3m2!1sen!2sin!4v1636541022102!5m2!1sen!2sin"
+                        width="100%" height="394" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                        <div class="text-center pt-3 pb-2">
+                            <h3>Kochi, Kerala</h3>
+                            <p class="p-0 m-0 fs-5">+91 480 273 2738</p>
+                            <p class="p-0 m-0 fs-5">contact@iomarket.in</p>
+                        </div>
+                        </div>
+                    </div>
+                </a>
             </div>
-
-            <?php  endwhile;endif; ?>
+            <div class="item px-lg-3 mt-5 mb-lg-4 mb-3">
+                <a href="javascript:;">
+                    <div class="map position-relative h-100 ">
+                        <div class="contact-map">
+                        <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691202.1333179204!2d71.66297316217478!3d25.38171803105038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b4d8ca87c7d%3A0x635c26516e67f223!2sAvadhesh%20House%2C%20Bodakdev%2C%20Ahmedabad%2C%20Gujarat%20380053!5e0!3m2!1sen!2sin!4v1636541841939!5m2!1sen!2sin"
+                        width="100%" height="394" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                        <div class="text-center pt-3 pb-2">
+                            <h3>Ahmedabad, Gujarat</h3>
+                            <p class="p-0 m-0 fs-5">+91 9328572745</p>
+                            <p class="p-0 m-0 fs-5">hr@edexa.com</p>
+                        </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="item px-lg-3 mt-5 mb-lg-4 mb-3">
+                <a href="https://www.io-market.com/" target="_blank">
+                    <div class="map position-relative h-100 ">
+                        <div class="contact-map">
+                        <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1393579.5150196871!2d6.802157664576643!3d46.98457557620155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b33e678b6fddd%3A0x434d571d3aecfa38!2sKanalstrasse%2032%2C%209490%20Vaduz%2C%20Liechtenstein!5e0!3m2!1sen!2sin!4v1636541562970!5m2!1sen!2sin"
+                        width="100%" height="394" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                        <div class="text-center pt-3 pb-2">
+                            <h3>Vaduz, Liechtenstein</h3>
+                            <p class="p-0 m-0 fs-5">+423 238 10 00</p>
+                            <p class="p-0 m-0 fs-5">contact@iomarket.in</p>
+                        </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="iomarket-section industries-section gray-bg">
+<section class="iomarket-section industries-section ">
     <div class="container">
         <div class="section-title display-5 green-color font-black mb-md-4 mb-3">
             <?php the_field('value_heading'); ?>
@@ -195,11 +209,12 @@
         </div>
     </div>
 </section>
-<section class="iomarket-section customer-section ">
+<section class="iomarket-section customer-section gray-bg">
     <div class="container">
         <div class="section-title display-5 green-color font-black mb-md-4 mb-3">
             <?php the_field('logo_customer_title'); ?>
         </div>
+        <p class="fs-5">io-market AG can count on a large and growing customer base, which includes many international companies. A short overview of the already existing customer base can be found below.</p>
         <ul class="our-best-customer-list owl-carousel d-flex flex-wrap justify-content-xl-start p-0">
             <!-- logo slider-->
             <?php  if (have_rows('customer_logos')): while (have_rows('customer_logos')) : the_row(); $imagess = get_sub_field('customer_logo');?>

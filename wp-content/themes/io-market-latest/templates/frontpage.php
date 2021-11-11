@@ -58,7 +58,7 @@ if(!empty($about_io_title) || !empty($about_io_description) || !empty($we_offer)
 <section class="iomarket-section quote-section position-relative">
     <div class="container">
         <div class="quote-text text-center p-md-5 p-4 m-auto fs-3 font-black position-relative white-color">
-            <span ><?php the_field('invest_sec'); ?></span><p>Alexander Moser, Laveba</p>
+            <span ><?php the_field('invest_sec'); ?></span><p>Alexander Moser, LAVEBA, io-market customer</p>
         </div>
     </div>
 </section>
@@ -158,7 +158,7 @@ if(have_rows('three_reasons')){ ?>
                 <?php if(!empty($reason_sub)) { ?>
                 <div class="title fs-3 font-bold pb-xl-4 pb-3 lightgray-color"><?php echo $reason_sub; ?></div>
                 <?php } ?>
-                <div class="detail-text fs-5">
+                <div class="detail-text fs-5 pt-3">
                     <!-- <p class="mb-xxl-5 mb-xl-4 mb-3">--><?php echo $reason_description; ?>
 
                     <!-- <?php if(!empty($button_text)) { ?>

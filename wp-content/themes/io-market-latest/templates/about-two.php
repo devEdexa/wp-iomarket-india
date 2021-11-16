@@ -89,7 +89,7 @@ if(!empty($satisfied_costumers_title) || !empty($satisfied_costumers)) {?>
             <?php echo $satisfied_costumers_title; ?></div>
         <?php } ?>
         <?php if(have_rows('satisfied_costumers')) :?>
-        <div id="costumers-carousel" class="owl-carousel">
+        <div id="costumers-carousel" class="owl-carousel mt-5">
             <?php while(have_rows('satisfied_costumers')) : the_row(); 
                 $customer_profile_photo = get_sub_field('customer_profile_photo');
                 $profile_url = $customer_profile_photo['sizes']['profilepic'];

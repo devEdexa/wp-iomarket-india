@@ -35,14 +35,14 @@ get_header();
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/svg/vector-404.svg"
                     alt="page-not-found">
                 <h1 class="entry-title font-black display-5 mb-2 w-100 text-center text-capitalize dark-color">
-                    <?php _e( 'Ups! Diese Seite kann nicht gefunden werden.', 'twentytwenty' ); ?></h1>
+                    <?php _e( 'Oops! This page cannot be found.', 'twentytwenty' ); ?></h1>
                 <div class="intro-text w-100 text-center">
                     <p class="fs-5 font-semibold text-capitalize dark-color">
-                        <?php _e( 'Die von Ihnen aufgerufene Seite ist nicht vorhanden.', 'twentytwenty' ); ?>
+                        <?php _e( 'The page you requested does not exist.', 'twentytwenty' ); ?>
                     </p>
-                    <a href="<?php echo icl_get_home_url() ?>"
+                    <a href="<?php echo site_url() ?>"
                         class="iom-button fs-5 z-index2 white-color hover-green-color text-uppercase "
-                        title="button "><?php _e( 'NACH HAUSE GEHEN' ); ?></a>
+                        title="button "><?php _e( 'GO HOME' ); ?></a>
 
 
                 </div>

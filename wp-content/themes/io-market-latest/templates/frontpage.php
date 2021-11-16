@@ -58,7 +58,7 @@ if(!empty($about_io_title) || !empty($about_io_description) || !empty($we_offer)
 <section class="iomarket-section quote-section position-relative">
     <div class="container">
         <div class="quote-text text-center p-md-5 p-4 m-auto fs-3 font-black position-relative white-color">
-            <span ><?php the_field('invest_sec'); ?></span><p>Alexander Moser, LAVEBA, io-market customer</p>
+            <span ><?php the_field('invest_sec'); ?></span><p><?php the_field('invest_timeline_shortline_sub_title'); ?></p>
         </div>
     </div>
 </section>
@@ -66,8 +66,7 @@ if(!empty($about_io_title) || !empty($about_io_description) || !empty($we_offer)
 $our_solutions_title = get_field('our_solutions_title');
 $our_solutions_description = get_field('our_solutions_description');
 $our_solutions = get_field('our_solutions');
-if(!empty($our_solutions_title) || !empty($our_solutions_description) || !empty($our_solutions)) {
- ?>
+if(!empty($our_solutions_title) || !empty($our_solutions_description) || !empty($our_solutions)) { ?>
 <section class="iomarket-section solution-section gray-bg">
     <div class="container">
         <div class="section-title display-5 green-color font-black mb-md-4 mb-3"><?php echo $our_solutions_title; ?>
@@ -103,12 +102,50 @@ if(!empty($our_solutions_title) || !empty($our_solutions_description) || !empty(
     </div>
 </section>
 <?php } ?>
-
+<?php 
+$satisfied_costumers_title = get_field('satisfied_costumers_title');
+$satisfied_costumers = get_field('satisfied_costumers');
+if(!empty($satisfied_costumers_title) || !empty($satisfied_costumers)) {?>
+<section class="iomarket-section costumers-section">
+    <div class="container">
+        <?php if(!empty($satisfied_costumers_title)) { ?>
+        <div class="section-title display-5 green-color font-black mb-md-4 mb-3">
+            <?php echo $satisfied_costumers_title; ?></div>
+        <?php } ?>
+        <?php if(have_rows('satisfied_costumers')) :?>
+        <div id="costumers-carousel" class="owl-carousel mt-5">
+            <?php while(have_rows('satisfied_costumers')) : the_row(); 
+                $customer_profile_photo = get_sub_field('customer_profile_photo');
+                $profile_url = $customer_profile_photo['sizes']['profilepic'];
+                $customer_name = get_sub_field('customer_name');
+                $customer_designation = get_sub_field('customer_designation');
+                $about_customer = get_sub_field('about_customer');
+                if(!empty($customer_profile_photo) || !empty($customer_name) || !empty($customer_designation) || !empty($about_customer)){?>
+            <div class="item justify-content-center d-flex flex-wrap">
+                <img src="<?php echo $profile_url; ?>" width="206" height="206" alt="profile"
+                    class="w-50 h-auto pb-sm-0 pb-3">
+                <div class="text-center pt-sm-3 pe-sm-3 ps-sm-3">
+                    <div class="title lightgray-color fs-4 font-bold pb-md-4 pb-3">
+                        <?php echo $customer_name; ?>
+                        <span class="d-block"><?php echo $customer_designation; ?></span>
+                    </div>
+                    <?php if(!empty($about_customer)) { ?>
+                    <div class="subtext fs-6 "><?php echo $about_customer; ?></div>
+                    <?php } ?>
+                </div>
+            </div>
+            <?php } ?>
+            <?php endwhile; ?>
+        </div>
+        <?php endif; ?>
+    </div>
+</section>
+<?php } ?>
 <?php 
 $three_reason = get_field('three_reasons_why_heading_title');
 $three_reasons = get_field('three_reasons');
 if(have_rows('three_reasons')){ ?>
-<section class="iomarket-section reason-section">
+<section class="iomarket-section reason-section gray-bg">
     <div class="container">
         <?php if(!empty($three_reason)){ ?>
         <div class="section-title display-5 green-color font-black mb-md-4 mb-3"><?php echo $three_reason; ?></div>

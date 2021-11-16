@@ -5,3 +5,25 @@ Version: 1.4
 Requires at least: 4.7
 Requires PHP: 5.2.4
 */
+
+.edexa-video-wrapper video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.edexa-video-wrapper {
+    overflow: hidden;
+    height: 40vh;
+}
+
+.edexa-banner-wrapper .quote-text{	
+	position: absolute !important;
+	top: 200px;
+}
+.edexa-banner-wrapper .quote-text{	
+	position: absolute !important;
+	top: 50%;
+    transform: translateY(-50%);
+}

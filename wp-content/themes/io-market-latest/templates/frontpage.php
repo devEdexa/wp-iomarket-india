@@ -55,12 +55,23 @@ if(!empty($about_io_title) || !empty($about_io_description) || !empty($we_offer)
     </div>
 </section>
 <?php } ?>
-<section class="iomarket-section quote-section position-relative">
+<section class="iomarket-section position-relative edexa-banner-wrapper">
+    <div class="edexa-video-wrapper">
+        <video id="edexaVideo" autoplay muted loop>
+            <source src=<?php echo get_stylesheet_directory_uri(); ?>/assets/images/io-market.mp4" type="video/mp4">
+            <source src=<?php echo get_stylesheet_directory_uri(); ?>/assets/images/io-market.mp4" type="video/ogg">
+        </video>
+    </div>
     <div class="container">
         <div class="quote-text text-center p-md-5 p-4 m-auto fs-3 font-black position-relative white-color">
             <span ><?php the_field('invest_sec'); ?></span><p><?php the_field('invest_timeline_shortline_sub_title'); ?></p>
         </div>
     </div>
+    <!-- <div class="container">
+        <div class="quote-text text-center p-md-5 p-4 m-auto fs-3 font-black position-relative white-color">
+            <span ><?php //the_field('invest_sec'); ?></span><p><?php //the_field('invest_timeline_shortline_sub_title'); ?></p>
+        </div>
+    </div> -->
 </section>
 <?php 
 $our_solutions_title = get_field('our_solutions_title');

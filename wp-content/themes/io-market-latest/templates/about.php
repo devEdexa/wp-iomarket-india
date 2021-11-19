@@ -126,7 +126,8 @@
                 <a href="<?php echo !empty( $website_url ) ? $website_url['url'] : 'javascript:;' ;?>" target="<?php echo !empty( $website_url ) ? $website_url['target'] : '' ;?>">
                     <div class="map position-relative h-100 ">
                         <div class="contact-map">
-                        <iframe src="<?php echo get_sub_field('offices_maps_iframe_src'); ?>" width="100%" height="394" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                        <iframe src="<?php echo get_sub_field('offices_maps_iframe_src'); ?>" width="100%" height="277" frameborder="0" style="border:0" allowfullscreen="" class="mapIframe"></iframe>
+                        <img src="<?php echo get_sub_field('office_image')['url']; ?>" width="100%" height="277" style="" class="officeImage">
                         <div class="text-center pt-3 pb-2">
                             <h3><?php echo get_sub_field('offices_maps_office_name'); ?></h3>
                             <p class="p-0 m-0 fs-5"><?php echo get_sub_field('offices_maps_mobile_number'); ?></p>
@@ -175,7 +176,7 @@
                             $cls = 'use-icon-six';
                         }?>
             <div class="industries-box col-lg-4 col-md-6 mb-md-4 mb-3">
-                <div class="use-content-box h-100 overflow-hidden">
+                <div class="new-icon use-content-box h-100 overflow-hidden">
                     <div class="inner-box position-relative transiton-03s z-index2 p-md-4 p-3 white-bg h-100">
                         <span class="mb-lg-3 icons <?php echo $cls;?>"></span>
                         <div class="inner-box-title text-break mb-3 fs-3 font-bold"><?php echo $val_heading;?></div>

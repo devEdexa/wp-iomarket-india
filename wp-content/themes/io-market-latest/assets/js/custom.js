@@ -13,7 +13,33 @@ $(document).scroll(function () {
 
 $(document).ready(function () {
 
-    
+    $(".officeImage").hide();
+    $(".mapIframe").show();
+
+    $('.map').hover(function(){
+    $(".officeImage",this).show();
+    $(".mapIframe",this).hide();
+    return false;
+    },
+    function() {
+      $('.officeImage',this).hide();
+      $('.mapIframe',this).show();
+    });
+    /*$(".map").hover(function() {
+      $('.officeImage').show();
+      $('.mapIframe').hide();
+    }, function() {
+      $('.officeImage').hide();
+      $('.mapIframe').show();
+    });*/
+    //console.log($(this).closest(".contact-map"));
+    /*$(document).on('mouseenter', '.map', function () {                       
+        $(this).closest(".contact-map").find(".mapIframe").hide();
+        $(this).closest(".contact-map").find(".officeImage").show();
+    }).on('mouseleave', '.map', function () {
+        //  $(this).findNext(".officeImage").hide();
+        // $(this).findNext(".mapIframe").show();
+    });*/
 
     if ($(window).width() < 797) {
         $('.page-template-edi-network .banner-text .green-color').each(function() {
@@ -205,7 +231,7 @@ $(document).ready(function () {
     });
     // Network section end
     bannerlogoSlider();
-    solutionSlider();
+    //solutionSlider();
     newsSlider();
     costumersSlider();
     casestudiesSlider();
@@ -219,7 +245,7 @@ $(document).ready(function () {
 
 $(window).resize(function () {
     bannerlogoSlider();
-    solutionSlider();
+    //solutionSlider();
     newsSlider();
     costumersSlider();
     casestudiesSlider();
@@ -277,7 +303,7 @@ function grayscale(src) {
     return canvas.toDataURL();
 }
 
-function solutionSlider() {
+/*function solutionSlider() {
     if ($(window).width() < 992) {
         $('.solution-slider').owlCarousel({
             margin: 20,
@@ -300,7 +326,7 @@ function solutionSlider() {
     } else {
         $('.solution-slider').owlCarousel('destroy')
     }
-}
+}*/
 
 function opportunitiesSlider() {
     $(".opportunities-carousel").owlCarousel({
@@ -323,7 +349,7 @@ function opportunitiesSlider() {
             },
 
             992: {
-                items: 3
+                items: 4
             }
         }
     });
@@ -357,7 +383,7 @@ function newsSlider() {
 }
 
 function costumersSlider() {
-    $("#costumers-carousel").owlCarousel({
+    $(".costumers-carousel").owlCarousel({
         margin: 20,
         loop: true,
         responsiveClass: true,
@@ -365,7 +391,7 @@ function costumersSlider() {
         autoplay: true,
         autoplayTimeout: 7000,
         smartSpeed: 1000,
-        nav: true,
+        nav: false,
         dots: false,
         responsive: {
             0: {
@@ -533,6 +559,7 @@ function featureSlider() {
     }, 1);
 
     $(function() {
+        $('.costumers-carousel').owlCarousel('destroy'); 
         //your current click function
         $('.current_page_item a').on('click', function(e) {
             e.preventDefault();

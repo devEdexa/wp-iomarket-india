@@ -16,7 +16,7 @@
 
         </div>
         <div class="row">
-            <div class="col-md-12 col-lg-6 vision-left order-lg-1 order-2">
+            <div class="col-md-12 col-lg-6 vision-left">
                 <div class="vision-content">
                     <!-- <div class="fs-4 lightgray-color font-black d-block mb-xxl-4 mb-3">
                         <?php //the_field('offer_subheading'); ?>
@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 col-lg-6 vision-right order-lg-2 order-1 mb-lg-0 mb-3">
+            <div class="col-md-12 col-lg-6 vision-right mb-lg-0 mb-3">
                 <div class="vision-image position-relative z-index1">
                     <?php 
 					$offer_upload_image = get_field('offer_upload_image');
@@ -89,7 +89,7 @@ if(!empty($satisfied_costumers_title) || !empty($satisfied_costumers)) {?>
             <?php echo $satisfied_costumers_title; ?></div>
         <?php } ?>
         <?php if(have_rows('satisfied_costumers')) :?>
-        <div id="costumers-carousel" class="owl-carousel mt-5">
+        <div class="owl-carousel mt-5 costumers-carousel">
             <?php while(have_rows('satisfied_costumers')) : the_row(); 
                 $customer_profile_photo = get_sub_field('customer_profile_photo');
                 $profile_url = $customer_profile_photo['sizes']['profilepic'];
@@ -122,16 +122,15 @@ if(!empty($satisfied_costumers_title) || !empty($satisfied_costumers)) {?>
         <div class="section-title display-5 green-color font-black mb-md-4 mb-3">
             <?php the_field('career_heading'); ?>
         </div>
-        <div class="owl-carousel opportunities-carousel"> <?php   if( have_rows('add_vacancy') ): while( have_rows('add_vacancy') ): the_row(); 
+        <div class="owl-carousel opportunities-carousel"> 
+            <?php   if( have_rows('add_vacancy') ): while( have_rows('add_vacancy') ): the_row(); 
 				$career_job_title = get_sub_field('career_job_title');$career_shortline = get_sub_field('career_shortline');
 				$apply_now_label = get_sub_field('apply_now_label');
 				$career_upload_image = get_sub_field('career_upload_image');?>
 
-            <div
-                class="career-box transiton-03s white-bg position-relative h-100 d-flex flex-column justify-content-start pb-xl-4 pb-3">
+            <div class="career-box transiton-03s white-bg position-relative h-100 d-flex flex-column justify-content-start pb-xl-4 pb-3">
                 <div class="career-img">
-                    <img class="transiton-03s w-100" src="<?php echo $career_upload_image['url']; ?>"
-                        alt="<?php echo $career_upload_image['alt'] ?>">
+                    <img class="transiton-03s w-100" src="<?php echo $career_upload_image['url']; ?>" alt="<?php echo $career_upload_image['alt'] ?>">
                 </div>
                 <div class="career-content gray-color pt-3 px-xl-4 px-3 mb-xl-4 mb-3">
                     <div class="career-title position-relative font-bold black-color mb-3 pb-2 fs-5">
@@ -147,7 +146,7 @@ if(!empty($satisfied_costumers_title) || !empty($satisfied_costumers)) {?>
                         <span class="btn-icon trans"></span>
                     </a>
                     <?php else:?>
-                    <a href="mailto:contact@io-market.com" class="black-color iom-button fs-8 rounded-pill"
+                    <a href="mailto:careers@iomarket.in" class="black-color iom-button fs-8 rounded-pill"
                         title="<?php echo $apply_now_label;?>">
                         <?php echo $apply_now_label;?>
                         <span class="btn-icon trans"></span>

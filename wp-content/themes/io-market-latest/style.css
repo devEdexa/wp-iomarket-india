@@ -6,24 +6,245 @@ Requires at least: 4.7
 Requires PHP: 5.2.4
 */
 
-.edexa-video-wrapper video {
+.iomarket-video-wrapper video {
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center;
 }
 
-.edexa-video-wrapper {
+.iomarket-video-wrapper {
     overflow: hidden;
     height: 40vh;
 }
 
-.edexa-banner-wrapper .quote-text{	
+.iomarket-banner-wrapper .quote-text{	
 	position: absolute !important;
 	top: 200px;
 }
-.edexa-banner-wrapper .quote-text{	
+.iomarket-banner-wrapper .quote-text{	
 	position: absolute !important;
 	top: 50%;
     transform: translateY(-50%);
+    background-color: #000000a1;
+}
+
+.new-icon.use-content-box .inner-box .icons {
+    background: url(./assets/images/svg/sprite.png) !important;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+.new-icon.use-content-box .inner-box .use-icon-one {
+    background-position: 0 -200px !important;
+    width: 91px;
+    height: 90px;
+}
+.new-icon.use-content-box .inner-box:hover .use-icon-one {
+    background-position: 0 -310px !important;
+}
+
+.new-icon.use-content-box .inner-box .use-icon-two {
+    background-position: -110px -198px !important;
+    width: 91px;
+    height: 90px;
+}
+.new-icon.use-content-box .inner-box:hover .use-icon-two {
+    background-position: -110px -309px !important;
+}
+
+.new-icon.use-content-box .inner-box .use-icon-three {
+    background-position: -220px -200px !important;
+    width: 91px;
+    height: 90px;
+}
+.new-icon.use-content-box .inner-box:hover .use-icon-three {
+    background-position: -220px -310px !important;
+}
+
+.new-icon.use-content-box .inner-box .use-icon-four {
+    background-position: -322px -200px !important;
+    width: 91px;
+    height: 90px;
+}
+.new-icon.use-content-box .inner-box:hover .use-icon-four {
+    background-position: -322px -310px !important;
+}
+
+.new-icon.use-content-box .inner-box .use-icon-five {
+    background-position: -415px -200px !important;
+    width: 91px;
+    height: 90px;
+}
+.new-icon.use-content-box .inner-box:hover .use-icon-five {
+    background-position: -420px -310px !important;
+}
+
+.new-icon.use-content-box .inner-box .use-icon-six {
+    background-position: -512px -200px !important;
+    width: 91px;
+    height: 90px;
+}
+.new-icon.use-content-box .inner-box:hover .use-icon-six {
+    background-position: -511px -310px !important;
+}
+
+
+/*technology banner*/
+/*.page-template-solution .innerbanner-section-main:after {
+    height: 4% !important;
+}*/
+
+
+/*particals*/
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000000;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #000000;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+
+/* ---- particles.js container ---- */
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+/*end*/
+
+/*start*/
+body.page-template-frontpage{
+    font-family: "Ubuntu";
+}
+.agb-cont li ol p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.agb-cont li li:before {
+    content:"";
+}
+.reasonImg{
+    width: auto;
+    height: 45%;
+}
+.innerbanner-section-main {
+    height: 622px;
+}
+.about-content .iomarket-arrow-listing li{
+    font-size: 17px;
+}
+.network-section .icon-box img{
+    width: 201px;
+    height: auto;
+}
+.network-section .icon-box{
+    text-align: center;
+}
+.network-section .fw-800{
+    font-weight: 800;
+}
+.network-section .network-title-hide{
+    display: none !important;
+}
+.customer-popup-img .w-100{
+    padding: 60px 60px 60px 60px;
+}
+@media only screen and (max-width: 1399px){
+    .reason-section .why-head .why-titile {
+        font-size: 1.8rem;
+    }
+    .reason-section .why-head .why-number {
+        font-size: 159px;
+        line-height: 159px;
+    }
+    .about-content .iomarket-arrow-listing li {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 991px){
+    .reason-section .why-icon {
+        max-width: 250px;
+        max-height: 250px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .reason-section .why-icon {
+        max-width: 250px;
+        max-height: 250px;
+    }
+    .header-main .logo img {
+        max-width: 118px;
+    }
+    .display-4 {
+        font-size: 2rem !important;
+    }
+    .new-icon .inner-box{
+        text-align: center;
+    }
+    .use-content-box .inner-box .icons {
+        transform-origin: center;
+    }
+    .use-content-box .inner-box .inner-box-title {
+        margin-top: 3px;
+    }
+    .network-section .network-title-hide{
+        display: block !important;
+    }
+    .network-section .network-title.removeTitle{
+        display: none !important;
+    }
+    .network-section .icon-box{
+        padding-bottom: 30px;
+    }
+    .why-titile{
+        padding-top: 0 !important;
+    }
+    .r-margin{
+        margin-top: -80px;
+    }
+    .use-content-box .inner-box{
+        text-align: center;
+    }
 }

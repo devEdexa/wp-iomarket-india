@@ -34,7 +34,7 @@ if(!empty($about_io_title) || !empty($about_io_description) || !empty($we_offer)
             </div>
 
             <div class="row">
-                <div class="col-md-6 mb-md-0 mb-3">
+                <div class="col-md-6 mb-md-0 mb-3 mt-3">
                     <?php if(!empty($we_offer)) { ?>
                     <div class="list-title fs-3 lightgray-color font-black text-uppercase mb-md-3 mb-2">
                         <?php echo $we_offer; ?>
@@ -42,7 +42,7 @@ if(!empty($about_io_title) || !empty($about_io_description) || !empty($we_offer)
                     <?php } ?>
                     <?php echo $we_offer_description; ?>
                 </div>
-                <div class="col-md-6 ps-md-5">
+                <div class="col-md-6 ps-md-5 mt-3">
                     <?php if(!empty($we_offer_2)) { ?>
                     <div class="list-title fs-3 lightgray-color font-black text-uppercase mb-md-3 mb-2">
                         <?php echo $we_offer_2; ?>
@@ -55,8 +55,8 @@ if(!empty($about_io_title) || !empty($about_io_description) || !empty($we_offer)
     </div>
 </section>
 <?php } ?>
-<section class="iomarket-section position-relative edexa-banner-wrapper">
-    <div class="edexa-video-wrapper">
+<section class="position-relative iomarket-banner-wrapper">
+    <div class="iomarket-video-wrapper">
         <video id="edexaVideo" autoplay muted loop>
             <source src=<?php echo get_stylesheet_directory_uri(); ?>/assets/images/io-market.mp4" type="video/mp4">
             <source src=<?php echo get_stylesheet_directory_uri(); ?>/assets/images/io-market.mp4" type="video/ogg">
@@ -124,7 +124,7 @@ if(!empty($satisfied_costumers_title) || !empty($satisfied_costumers)) {?>
             <?php echo $satisfied_costumers_title; ?></div>
         <?php } ?>
         <?php if(have_rows('satisfied_costumers')) :?>
-        <div id="costumers-carousel" class="owl-carousel mt-5">
+        <div class="owl-carousel mt-5 costumers-carousel">
             <?php while(have_rows('satisfied_costumers')) : the_row(); 
                 $customer_profile_photo = get_sub_field('customer_profile_photo');
                 $profile_url = $customer_profile_photo['sizes']['profilepic'];
@@ -179,14 +179,14 @@ if(have_rows('three_reasons')){ ?>
             $button_link = isset($button_link)? $button_link : '#';
             if(!empty($reason_number) || !empty($reason_title) || !empty($Reason_image) || !empty($reason_sub) || !empty($reason_description) || !empty($button_text) || !empty($button_link)){ ?>
         <?php if($count % 2 != 0){ ?>
-        <div class="row justify-content-between mb-lg-5 reason-wrapper">
-            <div class="col-xl-6 col-lg-6 col-sm-12 col-xs-12 d-flex flex-wrap mb-lg-5 mb-md-4 mb-3">
-                <div class="why-head d-flex align-items-center pb-xl-5 pb-xxl-4 pb-lg-3">
+        <div class="row justify-content-between reason-wrapper">
+            <div class="col-xl-6 col-lg-6 col-sm-12 col-xs-12 d-flex flex-wrap mb-3">
+                <div class="why-head d-flex pb-xl-5 pb-xxl-4 pb-lg-3">
                     <?php if(!empty($reason_number)) { ?>
                     <span class="why-number font-bold lightgray-color"><?php echo $reason_number; ?></span>
                     <?php } ?>
                     <div
-                        class="why-titile display-4 font-black green-color ms-xl-3 ms-2 ps-xl-4 ps-lg-3 position-relative text-capitalize">
+                        class="why-titile display-4 font-black green-color ms-xl-3 ms-2 ps-xl-4 ps-lg-3 position-relative text-capitalize pt-3">
                         <?php if(!empty($reason_title)) { ?>
                         <?php echo $reason_title; ?>
                         <?php } ?>
@@ -194,15 +194,14 @@ if(have_rows('three_reasons')){ ?>
                         <span
                             class="position-absolute display-3 lightgray-color text-capitalize font-black"><?php echo $get_first; ?></span>
                         <?php } ?>
+                        <?php if(!empty($Reason_image)) { ?>
+                <img class="mx-auto m-auto why-icon reasonImg mt-5" src="<?php echo $Reason_image; ?>" alt="innovative" >
+                <?php } ?>
                     </div>
                 </div>
-                <?php if(!empty($Reason_image)) { ?>
-                <img class="mt-lg-0 mx-auto m-auto why-icon" src="<?php echo $Reason_image; ?>" width="141" height="129"
-                    alt="innovative">
-                <?php } ?>
             </div>
             <?php if(!empty($reason_sub) || !empty($reason_description) || !empty($button_text) || !empty($button_link)){?>
-            <div class="col-xl-5 col-lg-6 col-sm-12 col-xs-12 mb-md-5 mb-4 reason-wrapper-inner pt-xxl-4 pt-lg-3 ">
+            <div class="col-xl-5 col-lg-6 col-sm-12 col-xs-12 mb-md-5 mb-4 reason-wrapper-inner pt-xxl-4 pt-lg-3 r-margin">
                 <?php if(!empty($reason_sub)) { ?>
                 <div class="title fs-3 font-bold pb-xl-4 pb-3 lightgray-color"><?php echo $reason_sub; ?></div>
                 <?php } ?>
@@ -219,14 +218,14 @@ if(have_rows('three_reasons')){ ?>
         </div>
         <?php } else { ?>
 
-        <div class="row justify-content-between mb-lg-5 reason-wrapper">
-            <div class="col-xl-6 col-lg-6 col-sm-12 col-xs-12 d-flex flex-wrap order-lg-2 order-1 mb-lg-5 mb-md-4 mb-3">
-                <div class="why-head d-flex align-items-center pb-xl-5 pb-xxl-4 pb-lg-3">
+        <div class="row justify-content-between reason-wrapper">
+            <div class="col-xl-6 col-lg-6 col-sm-12 col-xs-12 d-flex flex-wrap order-lg-2 order-1 mb-3">
+                <div class="why-head d-flex pb-xl-5 pb-xxl-4 pb-lg-3">
                     <?php if(!empty($reason_number)) { ?>
                     <span class="why-number font-bold lightgray-color"><?php echo $reason_number; ?></span>
                     <?php } ?>
                     <div
-                        class="why-titile display-4 font-black green-color ms-xl-3 ms-2 ps-xl-4 ps-lg-3 position-relative text-capitalize">
+                        class="why-titile display-4 font-black green-color ms-xl-3 ms-2 ps-xl-4 ps-lg-3 position-relative text-capitalize pt-3">
                         <?php if(!empty($reason_title)) { ?>
                         <?php echo $reason_title; ?>
                         <?php } ?>
@@ -234,14 +233,14 @@ if(have_rows('three_reasons')){ ?>
                         <span
                             class="position-absolute display-3 lightgray-color text-capitalize font-black"><?php echo $get_first; ?></span>
                         <?php } ?>
+                        <?php if(!empty($Reason_image)) { ?>
+                <img class="mx-auto m-auto why-icon reasonImg mt-5" src="<?php echo $Reason_image; ?>" alt="individual" >
+                <?php } ?>
                     </div>
                 </div>
-                <?php if(!empty($Reason_image)) { ?>
-                <img class="mt-lg-0 mx-auto m-auto why-icon" src="<?php echo $Reason_image; ?>" width="141" height="129"
-                    alt="individual">
-                <?php } ?>
+                
             </div>
-            <div class="col-xl-5 col-lg-6 col-sm-12 col-xs-12 order-lg-1 order-2 mb-md-5 mb-4 pt-xxl-4 pt-lg-3 ">
+            <div class="col-xl-5 col-lg-6 col-sm-12 col-xs-12 order-lg-1 order-2 mb-md-5 mb-4 pt-xxl-4 pt-lg-3 r-margin">
                 <?php if(!empty($reason_sub)) { ?>
                 <div class="title fs-3 font-bold pb-xl-4 pb-3 lightgray-color"><?php echo $reason_sub; ?></div>
                 <?php } ?>

@@ -29,6 +29,8 @@
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/home.css" />
     <?php }  else if ( is_page_template( 'templates/solution.php' ) ) { ?>
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/solution.css" />
+    <link rel="stylesheet" type="text/css"
+        href="<?php echo get_template_directory_uri(); ?>/assets/css/customers.css" />
     <?php }  else if (is_page_template( 'templates/about-two.php' ) ) { ?>
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/about.css" />    
     <?php }  else if (is_page_template( 'templates/about.php' ) ) { ?>
@@ -280,11 +282,12 @@
         <?php } else {  ?>
         <!-- END ALL POST/ARCHIVE ONLY -->
         <!-- ALL INNER PAGE ONLY-->
+        <?php 
+		$header_banner = get_field('header_banner');   
+        if (!empty($header_banner['url'])) { ?>
         <section class="innerbanner-section">
             <div class="innerbanner-section-main position-relative">
-                <?php 
-		$header_banner = get_field('header_banner');   
-		if( !empty( $header_banner ) ){ ?>
+            <?php if( !empty( $header_banner ) ){ ?>
                 <img class="banner-image position-absolute h-100" src="<?php echo esc_url($header_banner['url']); ?>"
                     alt="header-banner" />
                 <?php } else { ?>
@@ -296,13 +299,13 @@
                         <h1
                             class="lightgray-color display-5 font-black z-index2 position-relative mb-xxl-4 mb-md-3 mb-2 ">
                             <?php 
-					$header_heading = get_field('header_heading');   
-					if( !empty( $header_heading ) ){ ?>
+                    $header_heading = get_field('header_heading');   
+                    if( !empty( $header_heading ) ){ ?>
                             <?php the_field('header_heading'); ?>
                             <?php } ?>
                             <?php 
-					$header_subheading = get_field('header_subheading');   
-					if( !empty( $header_subheading ) ){ ?>
+                    $header_subheading = get_field('header_subheading');   
+                    if( !empty( $header_subheading ) ){ ?>
 
                             <span class="d-block green-color"><?php the_field('header_subheading'); ?>
                             </span>
@@ -323,7 +326,42 @@
                 </div>
             </div>
         </section>
-        <!-- END INNER PAGE ONLY-->
+        <?php }else { ?>
+            <section class="innerbanner-section">
+                <div class="innerbanner-section-main position-relative overflow-hidden">
+                    <div class="banner-text py-3 w-100 position-absolute">
+                        <div class="container">
+                            <h1
+                                class="lightgray-color display-5 font-black z-index2 position-relative mb-xxl-4 mb-md-3 mb-2 ">
+                                <?php 
+                        $header_heading = get_field('header_heading');   
+                        if( !empty( $header_heading ) ){ ?>
+                                <?php the_field('header_heading'); ?>
+                                <?php } ?>
+                                <?php 
+                        $header_subheading = get_field('header_subheading');   
+                        if( !empty( $header_subheading ) ){ ?>
 
-        <?php } } // 404 PAGE CONDITION END ?>
+                                <span class="d-block green-color"><?php the_field('header_subheading'); ?>
+                                </span>
+                                <?php } else { ?>
+
+                                <span class="d-block green-color"><?php the_title();?>
+                                    <?php } ?>
+                            </h1>
+
+                            <div class="banner-discription mb-3 black-color fs-5 font-semibold z-index2 position-relative">
+                                <?php the_field('header_shortline'); ?></div>
+                            <?php $page_button_label = get_field('page_button_label');    $page_redirect_link = get_field('page_redirect_link');    if(!empty($page_button_label)) { ?>
+                            <a href="<?php echo $page_redirect_link; ?>" titile="<?php echo $page_button_label; ?>"
+                                class="iom-arrow-button fs-4 green-bg white-color hover-white-color transiton-03s rounded border-1 green-border text-capitalize position-relative d-inline-block"><?php echo $page_button_label; ?></a>
+                            <?php } ?>
+
+                        </div>
+                    </div>
+                    <div id="particles-js"></div>
+                </div>
+            </section>
+        <?php }
+         } } // 404 PAGE CONDITION END ?>
         <!-- banner section ends-->

@@ -222,6 +222,8 @@ function iomarket_register_scripts() {
 	wp_enqueue_script( 'iom-owl-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', '', $theme_version, true );
 	// wp_enqueue_script( 'iom-lazysizes', get_template_directory_uri() . '/assets/js/lazysizes.min.js', '', $theme_version, true );
 	wp_enqueue_script( 'iom-customs', get_template_directory_uri() . '/assets/js/custom.js', '', $theme_version, true );
+	wp_enqueue_script( 'iom-particles', get_template_directory_uri() . '/assets/js/particles.js', '', $theme_version, true );
+	wp_enqueue_script( 'iom-app', get_template_directory_uri() . '/assets/js/app.js', '', $theme_version, true );
 
 }
 
